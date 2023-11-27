@@ -45,3 +45,43 @@ This project uses a Jupyter notebook to predict employee satisfaction levels bas
     - Analyze the ensemble model's performance and compare it to individual models.
     - Assess whether the ensemble approach improves predictive accuracy.
     - Visualize ensemble model predictions and understand how they complement each other.
+
+
+## Deployment Steps
+
+1. **Prepare Flask App:**
+   - Ensure your Flask app serves the machine learning model on a specific port (e.g., `http://localhost:5002`).
+
+2. **Install Ngrok:**
+   - Sign up on [Ngrok](https://ngrok.com/) and install it on your machine.
+
+3. **Update Flask App Script:**
+   - Modify your Flask app script to integrate Ngrok for tunneling.
+
+4. **Run Flask App:**
+   - Start your Flask app using `python app.py`.
+
+5. **Run Ngrok:**
+   - Open a new terminal and run `ngrok http 5002` to generate a public URL.
+
+6. **Test Deployed App:**
+   - Access your app via the Ngrok URL (e.g., `https://your_ngrok_subdomain.ngrok.io`).
+
+7. **Ngrok URL for Testing:**
+   - Utilize the Ngrok-generated URL in your testing script to send requests to the deployed app.
+
+## Model Deployment Using Ngrok
+
+To make the trained employee satisfaction prediction model accessible for real-time predictions, the Flask API has been deployed using Ngrok for tunneling. The consolidated model can be accessed using the following URL: [https://e0e4-102-68-79-99.ngrok-free.app/predict](https://e0e4-102-68-79-99.ngrok-free.app/predict).
+
+## Testing the Deployed Model
+
+To test the deployed model, you can use the provided test.py script. Follow the steps below:
+
+1. Ensure Python is installed on your machine.
+2. Open a terminal and navigate to the project directory.
+3. Run the test script:
+
+   ```bash
+   python test.py
+
